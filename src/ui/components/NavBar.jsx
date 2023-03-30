@@ -55,7 +55,7 @@ export const NavBar = () => {
                 <ul className="navbar-nav ml-auto">
                    
                     <span className="nav-item nav-link text-primary">
-                        Fernando
+                        Simón B.
                     </span>
 
                     <button

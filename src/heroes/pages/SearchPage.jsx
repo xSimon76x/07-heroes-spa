@@ -1,5 +1,25 @@
+import { useForm } from '../hooks/useForm'
+
 
 export const SearchPage = () => {
+    
+
+    const {
+        searchText,
+        onInputChange
+    } = useForm({
+        searchText: ''
+    });
+
+    const onSearchSubmit = (e) => {
+        e.preventDefault();
+
+        if ( searchText.trim().length <= 1 ) return;
+
+        console.log(searchText)
+
+    };
+
     return (
         <>
             <h1>Search Page</h1>
@@ -10,13 +30,15 @@ export const SearchPage = () => {
                     <h4>Searching</h4>
                     <hr />
 
-                    <form action="">
+                    <form action="submit" onSubmit={onSearchSubmit}>
                         <input 
                             type="text"
                             placeholder="Search a hero"
                             className="form-control"
                             name="searchText"
                             autoComplete="off" 
+                            value={searchText}
+                            onChange={ onInputChange }
                         />
 
                         <button

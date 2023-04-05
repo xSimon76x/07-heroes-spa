@@ -67,6 +67,8 @@ export const NavBar = () => {
                     <button
                         className="nav-item nav-link btn"
                         onClick={ onLogout }
+                        name='onLogout'
+                        aria-label='onLogout'
                     >
                         Logout
                     </button>

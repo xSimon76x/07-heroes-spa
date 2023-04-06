@@ -26,7 +26,7 @@ export const SearchPage = () => {
         e.preventDefault();
 
         if ( searchText.trim().length <= 1 ) return;
-
+        console.log("asds")
         navigate(`?q=${searchText}`);
 
     };
@@ -41,7 +41,7 @@ export const SearchPage = () => {
                     <h4>Searching</h4>
                     <hr />
 
-                    <form action="submit" onSubmit={onSearchSubmit}>
+                    <form action="submit" onSubmit={onSearchSubmit} aria-label='form'>
                         <input 
                             type="text"
                             placeholder="Search a hero"
@@ -71,6 +71,7 @@ export const SearchPage = () => {
                         Search a hero
                     </div>
                     <div 
+                        aria-label='alert-error'
                         className="alert alert-danger animate__animated animate__fadeIn" 
                         style={{ display: showError ? '' : 'none' }}
                     >
